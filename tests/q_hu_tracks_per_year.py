@@ -33,8 +33,9 @@ test = {
         },
         {
           'code': r"""
-          >>> len(hu_tracks_per_year)
-          170
+          >>> # You might or might not have dropped the 0 tracks years.
+          >>> len(hu_tracks_per_year) in (170, 172)
+          True
           """,
           'hidden': False,
           'locked': False

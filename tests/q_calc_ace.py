@@ -12,7 +12,17 @@ test = {
           'hidden': False,
           'locked': False
         },
-
+        #: begin-extra
+        {
+          'code': r"""
+          >>> res = calc_ace(np.array([10, 20, 30]))
+          >>> np.isclose(res, 0.14)
+          True
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        #: end-extra
       ],
       'scored': True,
       'setup': '',

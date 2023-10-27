@@ -31,7 +31,22 @@ test = {
           'hidden': False,
           'locked': False
         },
-
+        #: begin-extra
+        {
+          'code': r"""
+          >>> len(n_storms_by_year) == 172
+          True
+          >>> np.all(n_storms_by_year.index == np.arange(1851, 2023))
+          True
+          >>> np.all(n_storms_by_year.iloc[:5] == [4, 5, 4, 4, 3])
+          True
+          >>> np.all(n_storms_by_year.iloc[-5:] == [15, 12, 27, 17, 12])
+          True
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        #: end-extra
       ],
       'scored': True,
       'setup': '',

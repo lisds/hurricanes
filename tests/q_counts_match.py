@@ -31,7 +31,16 @@ test = {
           'hidden': False,
           'locked': False
         },
-
+        #: begin-extra
+        {
+          'code': r"""
+          >>> counts_match
+          True
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        #: end-extra
       ],
       'scored': True,
       'setup': '',

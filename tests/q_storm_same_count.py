@@ -39,7 +39,24 @@ test = {
           'hidden': False,
           'locked': False
         },
-
+        #: begin-extra
+        {
+          'code': r"""
+          >>> sorted(storm_same_count.index) == sorted(set(hurdat['Storm_ID']))
+          True
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        {
+          'code': r"""
+          >>> storm_same_count.all()
+          True
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        #: end-extra
       ],
       'scored': True,
       'setup': '',

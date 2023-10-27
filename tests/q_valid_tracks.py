@@ -31,7 +31,28 @@ test = {
           'hidden': False,
           'locked': False
         },
-
+        #: begin-extra
+        {
+          'code': r"""
+          >>> ((valid_tracks['Datetime'].dt.hour % 6) == 0).all()
+          True
+          >>> (valid_tracks['Datetime'].dt.minute == 0).all()
+          True
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        {
+          'code': r"""
+          >>> len(valid_tracks)
+          34931
+          >>> valid_tracks[ws_col].sum()
+          2176500
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        #: end-extra
       ],
       'scored': True,
       'setup': '',

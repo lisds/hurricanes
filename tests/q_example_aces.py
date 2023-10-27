@@ -40,7 +40,18 @@ test = {
           'hidden': False,
           'locked': False
         },
-
+        #: begin-extra
+        {
+          'code': r"""
+          >>> np.isclose(ivan_2004_ace, 70.38)
+          True
+          >>> np.isclose(isabel_2003_ace, 63.28)
+          True
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        #: end-extra
       ],
       'scored': True,
       'setup': '',

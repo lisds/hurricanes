@@ -31,7 +31,23 @@ test = {
           'hidden': False,
           'locked': False
         },
-
+        #: begin-extra
+        {
+          'code': r"""
+          >>> len(ace_per_year) == 172
+          True
+          >>> np.all(ace_per_year.index == np.arange(1851, 2023))
+          True
+          >>> np.all(ace_per_year.iloc[:4] == [36.24, 73.28, 76.49, 31])
+          True
+          >>> np.all(ace_per_year.iloc[-4:] == [132.2025, 180.3725, 145.5575,
+          ...                                   110.45])
+          True
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        #: end-extra
       ],
       'scored': True,
       'setup': '',
